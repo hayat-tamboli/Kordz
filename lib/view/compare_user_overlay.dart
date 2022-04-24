@@ -19,15 +19,15 @@ class _CompareUsersOverlayState extends State<CompareUsersOverlay> {
       behavior: HitTestBehavior.opaque,
       onTap: () => Navigator.of(context).pop(),
       child: DraggableScrollableSheet(
-        initialChildSize: 0.8,
-        minChildSize: 0.6,
+        initialChildSize: 0.7,
+        minChildSize: 0.5,
         builder: (_, controller) => Container(
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             color: Theme.of(context).bottomAppBarTheme.color,
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
+              topLeft: Radius.circular(48),
+              topRight: Radius.circular(48),
             ),
           ),
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
@@ -57,6 +57,9 @@ class _CompareUsersOverlayState extends State<CompareUsersOverlay> {
                   return const CircularProgressIndicator();
                 },
                 image: NetworkImage(widget.qrCode),
+                height: 250,
+                width: 250,
+                fit: BoxFit.cover,
               ),
               const SizedBox(height: 48),
               Row(

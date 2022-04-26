@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:kordz_app/view/comparision.dart';
 
 class CompareUsersOverlay extends StatefulWidget {
   const CompareUsersOverlay({
@@ -32,7 +33,6 @@ class _CompareUsersOverlayState extends State<CompareUsersOverlay> {
           ),
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
           child: Column(
-            // controller: controller,
             children: [
               SizedBox(
                 height: 4,
@@ -65,6 +65,13 @@ class _CompareUsersOverlayState extends State<CompareUsersOverlay> {
               Row(
                 children: [
                   GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const Comparision(),
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(24),
                       decoration: BoxDecoration(

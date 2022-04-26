@@ -1,3 +1,4 @@
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,13 +12,16 @@ List<ThemeData> getThemes() {
 //light theme
 ThemeData lighttheme = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  cardTheme: const CardTheme(
-    shadowColor: Color.fromARGB(42, 24, 35, 37),
+  cardTheme: CardTheme(
     clipBehavior: Clip.hardEdge,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
+    color: const Color(0xffEEEFF2),
+    elevation: 0,
+    shape: SmoothRectangleBorder(
+      borderRadius: SmoothBorderRadius(
+        cornerRadius: 32,
+        cornerSmoothing: 1,
+      ),
     ),
-    elevation: 10,
   ),
   scaffoldBackgroundColor: Colors.white,
   inputDecorationTheme: const InputDecorationTheme(

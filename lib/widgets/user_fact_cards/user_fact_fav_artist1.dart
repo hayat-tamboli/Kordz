@@ -12,12 +12,13 @@ class UserFactFavArtist1 extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-          color: const Color(0xffEEEFF2),
-          borderRadius: BorderRadius.circular(32),
-          border: Border.all(
-            color: const Color(0xffE2E4E8),
-            width: 2,
-          )),
+        color: const Color(0xffEEEFF2),
+        borderRadius: BorderRadius.circular(32),
+        border: Border.all(
+          color: const Color(0xffE2E4E8),
+          width: 2,
+        ),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
